@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,7 +33,7 @@
 		0A8E3E682714945800EE517A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E672714945800EE517A /* BaseViewController.swift */; };
 		0AE7B5CF2715D02D0027D116 /* TeamsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */; };
 		0AE7B5D02715D02D0027D116 /* TeamsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */; };
-		67C744A95B1532F2273ACB3B /* Pods_MyCricInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5093AAD13924CACD639BDC79 /* Pods_MyCricInfo.framework */; };
+		1D03CC0729B1284800228E05 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03CC0629B1284800228E05 /* TeamViewModel.swift */; };
 		84D2C3D929AFC0E400B74C92 /* PlayerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C3D729AFC0E400B74C92 /* PlayerDetailsVC.swift */; };
 		84D2C3DA29AFC0E400B74C92 /* PlayerDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2C3D829AFC0E400B74C92 /* PlayerDetailsVC.xib */; };
 /* End PBXBuildFile section */
@@ -67,9 +67,7 @@
 		0A8E3E672714945800EE517A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsVC.swift; sourceTree = "<group>"; };
 		0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsVC.xib; sourceTree = "<group>"; };
-		5093AAD13924CACD639BDC79 /* Pods_MyCricInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCricInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F0B668EEC8127A5D78CB376 /* Pods-MyCricInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCricInfo.release.xcconfig"; path = "Target Support Files/Pods-MyCricInfo/Pods-MyCricInfo.release.xcconfig"; sourceTree = "<group>"; };
-		7E351039BB10CC4927F943E4 /* Pods-MyCricInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCricInfo.debug.xcconfig"; path = "Target Support Files/Pods-MyCricInfo/Pods-MyCricInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		1D03CC0629B1284800228E05 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		84D2C3D729AFC0E400B74C92 /* PlayerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsVC.swift; sourceTree = "<group>"; };
 		84D2C3D829AFC0E400B74C92 /* PlayerDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C744A95B1532F2273ACB3B /* Pods_MyCricInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +88,6 @@
 			children = (
 				0A8E3E0F27146E9700EE517A /* MyCricInfo */,
 				0A8E3E0E27146E9700EE517A /* Products */,
-				F4DE59FE587EAF48EB59F7EA /* Pods */,
-				47C677F35771FF613AF20B1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +122,6 @@
 		0A8E3E2627146F8900EE517A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A8E3E2727146F9600EE517A /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +205,9 @@
 		0AE7B5CC2715D0110027D116 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
+				1D03CC0529B127E500228E05 /* View Model */,
+				1D03CC0429B127E000228E05 /* View */,
+				1D03CC0329B127D700228E05 /* Model */,
 				84D2C3D629AFC08000B74C92 /* Player Details */,
 				0A8E3E6127148F8100EE517A /* Collection Cell */,
 				0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */,
@@ -219,12 +216,27 @@
 			path = Teams;
 			sourceTree = "<group>";
 		};
-		47C677F35771FF613AF20B1B /* Frameworks */ = {
+		1D03CC0329B127D700228E05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5093AAD13924CACD639BDC79 /* Pods_MyCricInfo.framework */,
 			);
-			name = Frameworks;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D03CC0429B127E000228E05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E3E2727146F9600EE517A /* DataModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D03CC0529B127E500228E05 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D03CC0629B1284800228E05 /* TeamViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		84D2C3D629AFC08000B74C92 /* Player Details */ = {
@@ -236,15 +248,6 @@
 			path = "Player Details";
 			sourceTree = "<group>";
 		};
-		F4DE59FE587EAF48EB59F7EA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7E351039BB10CC4927F943E4 /* Pods-MyCricInfo.debug.xcconfig */,
-				5F0B668EEC8127A5D78CB376 /* Pods-MyCricInfo.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,11 +255,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A8E3E2127146E9A00EE517A /* Build configuration list for PBXNativeTarget "MyCricInfo" */;
 			buildPhases = (
-				C4472089A04A0C951041BF95 /* [CP] Check Pods Manifest.lock */,
 				0A8E3E0927146E9700EE517A /* Sources */,
 				0A8E3E0A27146E9700EE517A /* Frameworks */,
 				0A8E3E0B27146E9700EE517A /* Resources */,
-				BF701E1F24F682A0806A8621 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,48 +320,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BF701E1F24F682A0806A8621 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyCricInfo/Pods-MyCricInfo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyCricInfo/Pods-MyCricInfo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyCricInfo/Pods-MyCricInfo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4472089A04A0C951041BF95 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyCricInfo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0A8E3E0927146E9700EE517A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -376,6 +335,7 @@
 				0A8E3E1127146E9700EE517A /* AppDelegate.swift in Sources */,
 				0A8E3E392714716300EE517A /* ApiUrls.swift in Sources */,
 				0A8E3E512714727900EE517A /* CommentaryVC.swift in Sources */,
+				1D03CC0729B1284800228E05 /* TeamViewModel.swift in Sources */,
 				0A8E3E5B2714731A00EE517A /* UtilConstants.swift in Sources */,
 				0A8E3E4B2714725D00EE517A /* ScorecardVC.swift in Sources */,
 				0A8E3E2C2714709000EE517A /* TabBarController.swift in Sources */,
@@ -527,7 +487,6 @@
 		};
 		0A8E3E2227146E9A00EE517A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E351039BB10CC4927F943E4 /* Pods-MyCricInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -547,7 +506,6 @@
 		};
 		0A8E3E2327146E9A00EE517A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F0B668EEC8127A5D78CB376 /* Pods-MyCricInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

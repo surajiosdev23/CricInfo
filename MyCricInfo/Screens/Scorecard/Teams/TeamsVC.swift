@@ -21,6 +21,7 @@ class TeamsVC: UIViewController {
     
     let network = GenericNetworkCall()
     var dataModel : DataModel?
+    let teamsVM = TeamsViewModel()
     var selectedTabIndex = 0 //MARK: for Tab switching reference
     var matchUrl = ""
     var navBarTitle = ""
@@ -73,24 +74,36 @@ class TeamsVC: UIViewController {
         self.view.isUserInteractionEnabled = true
     }
     func fetchData(){
-        self.getResponseData { (response) in
-            switch response {
-            case .success(let data):
-                self.dataModel = data!
-                DispatchQueue.main.async {
-                    let time = data?.matchdetail.match.time ?? ""
-                    let date = data?.matchdetail.match.date ?? ""
+        if isConnectedToNetwork(){
+            self.ibActivityIndicator.startAnimating()
+            teamsVM.getResponseData(matchUrl: matchUrl) { response in
+                self.ibActivityIndicator.stopAnimating()
+                switch response{
+                case .success(let data):
+                    print("success")
+                    guard let data = data else {
+                        return
+                    }
+                    self.dataModel = data
+                    let time = data.matchdetail.match.time
+                    let date = data.matchdetail.match.date
                     let dateConverted = convertDateStringDynamic(dateString: date, inputDateFormat: "MM/dd/yyyy",outputDateFormat: "EEEE, MMM d, yyyy")
-                    let venue = data?.matchdetail.venue.name ?? ""
-                    self.lblInfo.text = dateConverted + " " + time + " - " + venue
-                    self.ibTableView.reloadData()
-                    self.ibCollectionView.reloadData()
+                    let venue = data.matchdetail.venue.name
+                    DispatchQueue.main.async {
+                        self.lblInfo.text = dateConverted + " " + time + " - " + venue
+                        self.ibTableView.reloadData()
+                        self.ibCollectionView.reloadData()
+                    }
+                case .failure(let err):
+                    print("failure")
+                    print("ERROR \(err)")
+                    self.alert(title: "Alert", message: err.message ?? "OOPS!!Something went wrong!!")
                 }
-            case .failure(let err):
-                print("ERROR \(err)")
-                self.alert(title: "Alert", message: err.message ?? "OOPS!!Something went wrong!!")
             }
+        }else{
+            self.alert(title: "Alert", message: "Connect to internet")
         }
+        
     }
 }
 //MARK: Tableview set up
@@ -149,7 +162,6 @@ extension TeamsVC : UITableViewDelegate{
 }
 
 //MARK: Collectionview set up
-
 extension TeamsVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
@@ -184,27 +196,4 @@ extension TeamsVC : UICollectionViewDelegateFlowLayout{
         return CGSize(width: collectionView.frame.size.width/2, height: 50)
     }
 }
-//MARK: API CALL
-extension TeamsVC{
-    func getResponseData(completion: @escaping
-                         (Swift.Result<DataModel?, GenericNetworkCall.ErrorPOJO>) -> Void) {
-        if isConnectedToNetwork(){
-            self.ibActivityIndicator.startAnimating()
-            network.fetchData(url: matchUrl, method: .get, params: [String : Any](), responseClass: DataModel.self) { (response) in
-                DispatchQueue.main.async {
-                    self.ibActivityIndicator.stopAnimating()
-                }
-                switch response {
-                case .success(let data):
-                    completion(.success(data))
-                case .failure(let err):
-                    print("ERROR \(err)")
-                    completion(.failure(err))
-                }
-            }
-        }else{
-            self.alert(title: "Alert", message: "Connect to internet")
-        }
-        
-    }
-}
+
