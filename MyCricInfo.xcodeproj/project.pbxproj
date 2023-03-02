@@ -105,7 +105,6 @@
 				0A8E3E3F271471E800EE517A /* Screens */,
 				0A8E3E2E271470D800EE517A /* Utility */,
 				0A8E3E59271472F200EE517A /* Global */,
-				0A8E3E2627146F8900EE517A /* Model */,
 				0A8E3E1027146E9700EE517A /* AppDelegate.swift */,
 				0A8E3E1227146E9700EE517A /* SceneDelegate.swift */,
 				0A8E3E1427146E9700EE517A /* ViewController.swift */,
@@ -117,13 +116,6 @@
 				0A8E3E672714945800EE517A /* BaseViewController.swift */,
 			);
 			path = MyCricInfo;
-			sourceTree = "<group>";
-		};
-		0A8E3E2627146F8900EE517A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0A8E3E2E271470D800EE517A /* Utility */ = {
