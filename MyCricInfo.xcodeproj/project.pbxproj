@@ -211,7 +211,6 @@
 				84D2C3D629AFC08000B74C92 /* Player Details */,
 				0A8E3E6127148F8100EE517A /* Collection Cell */,
 				0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */,
-				0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -219,6 +218,7 @@
 		1D03CC0329B127D700228E05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A8E3E2727146F9600EE517A /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 		1D03CC0429B127E000228E05 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0A8E3E2727146F9600EE517A /* DataModel.swift */,
+				0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
