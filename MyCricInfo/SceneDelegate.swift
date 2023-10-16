@@ -15,8 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window?.windowScene = windowScene
         self.window?.backgroundColor = .white
-        let tabVC = TabBarController()
-        window?.rootViewController = tabVC
+        let matchesVC : UIViewController = MatchesVC()
+        let matchesNavVC = UINavigationController(rootViewController: matchesVC)
+        window?.rootViewController = matchesNavVC
         window?.makeKeyAndVisible()
         
     }

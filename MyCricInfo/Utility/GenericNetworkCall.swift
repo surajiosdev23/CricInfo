@@ -1,69 +1,42 @@
 import Foundation
 
-public enum Result<Value> {
-    case success(Value)
-    case failure(Error)
-}
-struct CommonError : Codable{
-    var error: String?
-    var message: String?
-}
-enum APIError: Error {
-    case requestFailed
-    case jsonConversionFailure
-    case invalidData
-    case responseUnsuccessful
-    case jsonParsingFailure
-    var localizedDescription: String {
-        switch self {
-        case .requestFailed: return "Request Failed"
-        case .invalidData: return "Invalid Data"
-        case .responseUnsuccessful: return "Response Unsuccessful"
-        case .jsonParsingFailure: return "JSON Parsing Failure"
-        case .jsonConversionFailure: return "JSON Conversion Failure"
-        }
-    }
-}
 class GenericNetworkCall {
-    func fetchData<T: Decodable>(url: String, method: String, params:[String:Any], responseClass: T.Type , completion:@escaping (Swift.Result<T?, ErrorPOJO>) -> Void) {
-        print("URL : \(url)")
-        print("params : \(params)")
+    func fetchData<T: Decodable>(url: String, method: String, params:[String:Any], responseClass: T.Type , completion:@escaping (Result<T, APIError>) -> Void) {
         guard let url = URL(string: url) else {
+            completion(.failure(.requestFailed))
             return
         }
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = method
+        
+        // Add any additional headers or parameters here
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
-                
                 if let error = error {
-                    
-                    print(error.localizedDescription)
-                    completion(.failure(error as! GenericNetworkCall.ErrorPOJO))
-                    
-                } else if let httpResponse = response as? HTTPURLResponse {
-                    
-                    if httpResponse.statusCode == 200 {
-                        
-                        let mappedModel = try? JSONDecoder().decode(T.self, from: data!)
-                        
-                        if mappedModel != nil {
-                            
-                            completion(.success(mappedModel))
-                            
-                        } else {
-                            completion(.failure(error as! GenericNetworkCall.ErrorPOJO))
-                        }
-                    } else {
-                        completion(.failure(error as! GenericNetworkCall.ErrorPOJO))
-                    }
+                    completion(.failure(.requestFailed))
+                    return
+                }
+                
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    completion(.failure(.responseUnsuccessful))
+                    return
+                }
+                
+                guard let data = data else {
+                    completion(.failure(.invalidData))
+                    return
+                }
+                
+                do {
+                    let mappedModel = try JSONDecoder().decode(T.self, from: data)
+                    completion(.success(mappedModel))
+                } catch {
+                    completion(.failure(.jsonParsingFailure))
                 }
             }
-        })
+        }
         task.resume()
     }
-    
-    
-    struct ErrorPOJO: Error, Codable {
-        var message: String?
-    }
 }
-

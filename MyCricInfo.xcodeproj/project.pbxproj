@@ -14,18 +14,11 @@
 		0A8E3E1A27146E9A00EE517A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E1927146E9A00EE517A /* Assets.xcassets */; };
 		0A8E3E1D27146E9A00EE517A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E1B27146E9A00EE517A /* LaunchScreen.storyboard */; };
 		0A8E3E2827146F9600EE517A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E2727146F9600EE517A /* DataModel.swift */; };
-		0A8E3E2C2714709000EE517A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E2B2714709000EE517A /* TabBarController.swift */; };
 		0A8E3E362714716300EE517A /* CheckInternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E302714716200EE517A /* CheckInternetConnection.swift */; };
 		0A8E3E392714716300EE517A /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E332714716300EE517A /* ApiUrls.swift */; };
 		0A8E3E3A2714716300EE517A /* GenericNetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E342714716300EE517A /* GenericNetworkCall.swift */; };
-		0A8E3E462714724600EE517A /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E442714724600EE517A /* SummaryVC.swift */; };
-		0A8E3E472714724600EE517A /* SummaryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E452714724600EE517A /* SummaryVC.xib */; };
-		0A8E3E4B2714725D00EE517A /* ScorecardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E492714725C00EE517A /* ScorecardVC.swift */; };
-		0A8E3E4C2714725D00EE517A /* ScorecardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E4A2714725D00EE517A /* ScorecardVC.xib */; };
-		0A8E3E512714727900EE517A /* CommentaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E4F2714727900EE517A /* CommentaryVC.swift */; };
-		0A8E3E522714727900EE517A /* CommentaryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E502714727900EE517A /* CommentaryVC.xib */; };
-		0A8E3E562714729100EE517A /* MatchInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E542714729100EE517A /* MatchInfoVC.swift */; };
-		0A8E3E572714729100EE517A /* MatchInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E552714729100EE517A /* MatchInfoVC.xib */; };
+		0A8E3E4B2714725D00EE517A /* MatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E492714725C00EE517A /* MatchesVC.swift */; };
+		0A8E3E4C2714725D00EE517A /* MatchesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E4A2714725D00EE517A /* MatchesVC.xib */; };
 		0A8E3E5B2714731A00EE517A /* UtilConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E5A2714731A00EE517A /* UtilConstants.swift */; };
 		0A8E3E5E2714736200EE517A /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E5D2714736200EE517A /* CommonMethods.swift */; };
 		0A8E3E6427148FAC00EE517A /* TeamTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E6227148FAC00EE517A /* TeamTabCell.swift */; };
@@ -34,8 +27,8 @@
 		0AE7B5CF2715D02D0027D116 /* TeamsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */; };
 		0AE7B5D02715D02D0027D116 /* TeamsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */; };
 		1D03CC0729B1284800228E05 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03CC0629B1284800228E05 /* TeamViewModel.swift */; };
-		84D2C3D929AFC0E400B74C92 /* PlayerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2C3D729AFC0E400B74C92 /* PlayerDetailsVC.swift */; };
-		84D2C3DA29AFC0E400B74C92 /* PlayerDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2C3D829AFC0E400B74C92 /* PlayerDetailsVC.xib */; };
+		1D2BD25C2ADA5E130022BF3C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BD25B2ADA5E130022BF3C /* extensions.swift */; };
+		1D2BD25E2ADA5E860022BF3C /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BD25D2ADA5E860022BF3C /* enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,18 +41,11 @@
 		0A8E3E1C27146E9A00EE517A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A8E3E1E27146E9A00EE517A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8E3E2727146F9600EE517A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		0A8E3E2B2714709000EE517A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0A8E3E302714716200EE517A /* CheckInternetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInternetConnection.swift; sourceTree = "<group>"; };
 		0A8E3E332714716300EE517A /* ApiUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
 		0A8E3E342714716300EE517A /* GenericNetworkCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericNetworkCall.swift; sourceTree = "<group>"; };
-		0A8E3E442714724600EE517A /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
-		0A8E3E452714724600EE517A /* SummaryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryVC.xib; sourceTree = "<group>"; };
-		0A8E3E492714725C00EE517A /* ScorecardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardVC.swift; sourceTree = "<group>"; };
-		0A8E3E4A2714725D00EE517A /* ScorecardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScorecardVC.xib; sourceTree = "<group>"; };
-		0A8E3E4F2714727900EE517A /* CommentaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentaryVC.swift; sourceTree = "<group>"; };
-		0A8E3E502714727900EE517A /* CommentaryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentaryVC.xib; sourceTree = "<group>"; };
-		0A8E3E542714729100EE517A /* MatchInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInfoVC.swift; sourceTree = "<group>"; };
-		0A8E3E552714729100EE517A /* MatchInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchInfoVC.xib; sourceTree = "<group>"; };
+		0A8E3E492714725C00EE517A /* MatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesVC.swift; sourceTree = "<group>"; };
+		0A8E3E4A2714725D00EE517A /* MatchesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchesVC.xib; sourceTree = "<group>"; };
 		0A8E3E5A2714731A00EE517A /* UtilConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilConstants.swift; sourceTree = "<group>"; };
 		0A8E3E5D2714736200EE517A /* CommonMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
 		0A8E3E6227148FAC00EE517A /* TeamTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTabCell.swift; sourceTree = "<group>"; };
@@ -68,8 +54,8 @@
 		0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsVC.swift; sourceTree = "<group>"; };
 		0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsVC.xib; sourceTree = "<group>"; };
 		1D03CC0629B1284800228E05 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
-		84D2C3D729AFC0E400B74C92 /* PlayerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsVC.swift; sourceTree = "<group>"; };
-		84D2C3D829AFC0E400B74C92 /* PlayerDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailsVC.xib; sourceTree = "<group>"; };
+		1D2BD25B2ADA5E130022BF3C /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		1D2BD25D2ADA5E860022BF3C /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +98,6 @@
 				0A8E3E1927146E9A00EE517A /* Assets.xcassets */,
 				0A8E3E1B27146E9A00EE517A /* LaunchScreen.storyboard */,
 				0A8E3E1E27146E9A00EE517A /* Info.plist */,
-				0A8E3E2B2714709000EE517A /* TabBarController.swift */,
 				0A8E3E672714945800EE517A /* BaseViewController.swift */,
 			);
 			path = MyCricInfo;
@@ -131,49 +116,19 @@
 		0A8E3E3F271471E800EE517A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0A8E3E402714720100EE517A /* Summary */,
-				0A8E3E412714720800EE517A /* Scorecard */,
-				0A8E3E422714721000EE517A /* Commentary */,
-				0A8E3E432714721800EE517A /* Match Info */,
+				0A8E3E412714720800EE517A /* Matches */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		0A8E3E402714720100EE517A /* Summary */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E3E442714724600EE517A /* SummaryVC.swift */,
-				0A8E3E452714724600EE517A /* SummaryVC.xib */,
-			);
-			path = Summary;
-			sourceTree = "<group>";
-		};
-		0A8E3E412714720800EE517A /* Scorecard */ = {
+		0A8E3E412714720800EE517A /* Matches */ = {
 			isa = PBXGroup;
 			children = (
 				0AE7B5CC2715D0110027D116 /* Teams */,
-				0A8E3E492714725C00EE517A /* ScorecardVC.swift */,
-				0A8E3E4A2714725D00EE517A /* ScorecardVC.xib */,
+				0A8E3E492714725C00EE517A /* MatchesVC.swift */,
+				0A8E3E4A2714725D00EE517A /* MatchesVC.xib */,
 			);
-			path = Scorecard;
-			sourceTree = "<group>";
-		};
-		0A8E3E422714721000EE517A /* Commentary */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E3E4F2714727900EE517A /* CommentaryVC.swift */,
-				0A8E3E502714727900EE517A /* CommentaryVC.xib */,
-			);
-			path = Commentary;
-			sourceTree = "<group>";
-		};
-		0A8E3E432714721800EE517A /* Match Info */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E3E542714729100EE517A /* MatchInfoVC.swift */,
-				0A8E3E552714729100EE517A /* MatchInfoVC.xib */,
-			);
-			path = "Match Info";
+			path = Matches;
 			sourceTree = "<group>";
 		};
 		0A8E3E59271472F200EE517A /* Global */ = {
@@ -181,6 +136,8 @@
 			children = (
 				0A8E3E5D2714736200EE517A /* CommonMethods.swift */,
 				0A8E3E5A2714731A00EE517A /* UtilConstants.swift */,
+				1D2BD25B2ADA5E130022BF3C /* extensions.swift */,
+				1D2BD25D2ADA5E860022BF3C /* enums.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -200,7 +157,6 @@
 				1D03CC0529B127E500228E05 /* View Model */,
 				1D03CC0429B127E000228E05 /* View */,
 				1D03CC0329B127D700228E05 /* Model */,
-				84D2C3D629AFC08000B74C92 /* Player Details */,
 				0A8E3E6127148F8100EE517A /* Collection Cell */,
 				0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */,
 			);
@@ -229,15 +185,6 @@
 				1D03CC0629B1284800228E05 /* TeamViewModel.swift */,
 			);
 			path = "View Model";
-			sourceTree = "<group>";
-		};
-		84D2C3D629AFC08000B74C92 /* Player Details */ = {
-			isa = PBXGroup;
-			children = (
-				84D2C3D729AFC0E400B74C92 /* PlayerDetailsVC.swift */,
-				84D2C3D829AFC0E400B74C92 /* PlayerDetailsVC.xib */,
-			);
-			path = "Player Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,12 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE7B5D02715D02D0027D116 /* TeamsVC.xib in Resources */,
-				0A8E3E4C2714725D00EE517A /* ScorecardVC.xib in Resources */,
-				0A8E3E522714727900EE517A /* CommentaryVC.xib in Resources */,
-				0A8E3E572714729100EE517A /* MatchInfoVC.xib in Resources */,
-				84D2C3DA29AFC0E400B74C92 /* PlayerDetailsVC.xib in Resources */,
+				0A8E3E4C2714725D00EE517A /* MatchesVC.xib in Resources */,
 				0A8E3E1D27146E9A00EE517A /* LaunchScreen.storyboard in Resources */,
-				0A8E3E472714724600EE517A /* SummaryVC.xib in Resources */,
 				0A8E3E1A27146E9A00EE517A /* Assets.xcassets in Resources */,
 				0A8E3E6527148FAC00EE517A /* TeamTabCell.xib in Resources */,
 				0A8E3E1827146E9700EE517A /* Main.storyboard in Resources */,
@@ -318,23 +261,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8E3E6427148FAC00EE517A /* TeamTabCell.swift in Sources */,
-				0A8E3E562714729100EE517A /* MatchInfoVC.swift in Sources */,
 				0A8E3E1527146E9700EE517A /* ViewController.swift in Sources */,
-				0A8E3E462714724600EE517A /* SummaryVC.swift in Sources */,
 				0A8E3E682714945800EE517A /* BaseViewController.swift in Sources */,
 				0A8E3E3A2714716300EE517A /* GenericNetworkCall.swift in Sources */,
 				0A8E3E2827146F9600EE517A /* DataModel.swift in Sources */,
+				1D2BD25E2ADA5E860022BF3C /* enums.swift in Sources */,
 				0A8E3E1127146E9700EE517A /* AppDelegate.swift in Sources */,
 				0A8E3E392714716300EE517A /* ApiUrls.swift in Sources */,
-				0A8E3E512714727900EE517A /* CommentaryVC.swift in Sources */,
 				1D03CC0729B1284800228E05 /* TeamViewModel.swift in Sources */,
 				0A8E3E5B2714731A00EE517A /* UtilConstants.swift in Sources */,
-				0A8E3E4B2714725D00EE517A /* ScorecardVC.swift in Sources */,
-				0A8E3E2C2714709000EE517A /* TabBarController.swift in Sources */,
+				0A8E3E4B2714725D00EE517A /* MatchesVC.swift in Sources */,
 				0A8E3E5E2714736200EE517A /* CommonMethods.swift in Sources */,
+				1D2BD25C2ADA5E130022BF3C /* extensions.swift in Sources */,
 				0A8E3E362714716300EE517A /* CheckInternetConnection.swift in Sources */,
 				0A8E3E1327146E9700EE517A /* SceneDelegate.swift in Sources */,
-				84D2C3D929AFC0E400B74C92 /* PlayerDetailsVC.swift in Sources */,
 				0AE7B5CF2715D02D0027D116 /* TeamsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
