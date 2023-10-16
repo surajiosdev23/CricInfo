@@ -23,7 +23,6 @@
 		0A8E3E5E2714736200EE517A /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E5D2714736200EE517A /* CommonMethods.swift */; };
 		0A8E3E6427148FAC00EE517A /* TeamTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E6227148FAC00EE517A /* TeamTabCell.swift */; };
 		0A8E3E6527148FAC00EE517A /* TeamTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E3E6327148FAC00EE517A /* TeamTabCell.xib */; };
-		0A8E3E682714945800EE517A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E672714945800EE517A /* BaseViewController.swift */; };
 		0AE7B5CF2715D02D0027D116 /* TeamsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */; };
 		0AE7B5D02715D02D0027D116 /* TeamsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */; };
 		1D03CC0729B1284800228E05 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03CC0629B1284800228E05 /* TeamViewModel.swift */; };
@@ -50,7 +49,6 @@
 		0A8E3E5D2714736200EE517A /* CommonMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
 		0A8E3E6227148FAC00EE517A /* TeamTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTabCell.swift; sourceTree = "<group>"; };
 		0A8E3E6327148FAC00EE517A /* TeamTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamTabCell.xib; sourceTree = "<group>"; };
-		0A8E3E672714945800EE517A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0AE7B5CD2715D02D0027D116 /* TeamsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsVC.swift; sourceTree = "<group>"; };
 		0AE7B5CE2715D02D0027D116 /* TeamsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsVC.xib; sourceTree = "<group>"; };
 		1D03CC0629B1284800228E05 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				0A8E3E1927146E9A00EE517A /* Assets.xcassets */,
 				0A8E3E1B27146E9A00EE517A /* LaunchScreen.storyboard */,
 				0A8E3E1E27146E9A00EE517A /* Info.plist */,
-				0A8E3E672714945800EE517A /* BaseViewController.swift */,
 			);
 			path = MyCricInfo;
 			sourceTree = "<group>";
@@ -262,7 +259,6 @@
 			files = (
 				0A8E3E6427148FAC00EE517A /* TeamTabCell.swift in Sources */,
 				0A8E3E1527146E9700EE517A /* ViewController.swift in Sources */,
-				0A8E3E682714945800EE517A /* BaseViewController.swift in Sources */,
 				0A8E3E3A2714716300EE517A /* GenericNetworkCall.swift in Sources */,
 				0A8E3E2827146F9600EE517A /* DataModel.swift in Sources */,
 				1D2BD25E2ADA5E860022BF3C /* enums.swift in Sources */,

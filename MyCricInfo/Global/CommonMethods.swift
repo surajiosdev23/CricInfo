@@ -2,10 +2,7 @@
 //  CommonMethods.swift
 //
 
-import AVFoundation
 import UIKit
-import CoreLocation
-import Photos
 
 func convertDateStringDynamic(dateString:String,inputDateFormat : String ,outputDateFormat:String = "") -> String {
     if dateString.isEmpty {
