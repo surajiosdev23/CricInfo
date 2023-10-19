@@ -20,20 +20,19 @@ class TeamsVC: UIViewController {
     //MARK: View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUpUI()
+        self.setUpNavigationBar()
+        self.setUpTableview()
         self.fetchData()
     }
-    
-    //MARK: UI Setup
-    func setUpUI(){
-        // Set title and navigation bar
+    func setUpNavigationBar(){
         self.title = "Squads"
         self.navigationController?.navigationBar.setUpNavBar()
-        
         // Set right bar button item
         let showInfo = UIBarButtonItem(title: "Info", style: .plain, target: self, action: #selector(showInfoTapped(sender:)))
         navigationItem.rightBarButtonItems = [showInfo]
-        
+    }
+    //MARK: UI Setup
+    func setUpTableview(){
         // Set table view properties
         ibTableView.tableFooterView = UIView()
         ibCollectionView.register(UINib(nibName: "TeamTabCell", bundle: nil), forCellWithReuseIdentifier: "TeamTabCell")
@@ -124,19 +123,21 @@ extension TeamsVC : UITableViewDataSource{
                 (Int(a.value.position) ?? 0) < (Int(b.value.position) ?? 0)
             })
         }
+        cell.textLabel?.text = setCelldata(sortedArray: sortedArray, index: indexPath.row)
         
-        let fullName = sortedArray?[indexPath.row].value.nameFull ?? ""
-        let isKeeper = sortedArray?[indexPath.row].value.iskeeper ?? false
-        let isCaptain = sortedArray?[indexPath.row].value.iscaptain ?? false
+        return cell
+    }
+    func setCelldata(sortedArray : [Dictionary<String, Player>.Element]?,index : Int) -> String{
+        let fullName = sortedArray?[index].value.nameFull ?? ""
+        let isKeeper = sortedArray?[index].value.iskeeper ?? false
+        let isCaptain = sortedArray?[index].value.iscaptain ?? false
         
         // Set cell text
-        cell.textLabel?.text = (isKeeper && isCaptain) ? "\(fullName) (c & wk)" :
+        return (isKeeper && isCaptain) ? "\(fullName) (c & wk)" :
         (isCaptain) ? "\(fullName) (c)" :
         (isKeeper) ? "\(fullName) (wk)" :
         fullName
-        return cell
     }
-    
 }
 extension TeamsVC : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -220,7 +221,7 @@ extension TeamsVC{
             info += bowlingStyle(bowlingStyle: playerModel?.bowling.style ?? "NA")
         }
         
-        info += "\n" + "Runs : " + (playerModel?.batting.runs ?? "NA")
+        //info += "\n" + "Runs : " + (playerModel?.batting.runs ?? "NA")
         return info
     }
     

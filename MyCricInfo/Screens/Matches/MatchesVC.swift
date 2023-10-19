@@ -12,8 +12,14 @@ class MatchesVC: UIViewController {
     let matchesArray = ["India vs New Zealand","South Africa vs Pakistan"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavigationBar()
+        setUpTableview()
+    }
+    func setUpNavigationBar(){
         self.title = "Matches"
         self.navigationController?.navigationBar.setUpNavBar()
+    }
+    func setUpTableview(){
         ibTableView.tableFooterView = UIView()
         let dummyViewHeight = CGFloat(40) //MARK: to prevent overlapping of header and tableview cell content
         self.ibTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.ibTableView.bounds.size.width, height: dummyViewHeight))
