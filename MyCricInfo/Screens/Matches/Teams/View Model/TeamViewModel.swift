@@ -14,7 +14,7 @@ class TeamsViewModel {
                 case .success(let data):
                     completion(.success(data))
                 case .failure(let error):
-                    print("Error fetching player data:", error)
+                    debugPrint("Error fetching player data:", error)
                     completion(.failure(error))
                 }
             }

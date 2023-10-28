@@ -70,15 +70,15 @@ class TeamsVC: UIViewController {
                 self?.ibActivityIndicator.stopAnimating()
                 switch response{
                 case .success(let data):
-                    print("success")
+                    debugPrint("success")
                     guard let data = data else {
                         return
                     }
                     self?.dataModel = data
                     self?.setData(data: data)
                 case .failure(let err):
-                    print("failure")
-                    print("ERROR \(err)")
+                    debugPrint("failure")
+                    debugPrint("ERROR \(err)")
                     self?.alert(title: "Alert", message: err.localizedDescription)
                 }
             })
@@ -94,10 +94,10 @@ class TeamsVC: UIViewController {
     func setData(data : DataModel){
         self.ibCollectionView.isHidden = false
         self.ibTableView.isHidden = false
-        let time = data.matchdetail.match.time
-        let date = data.matchdetail.match.date
+        let time = data.matchdetail?.match?.time ?? ""
+        let date = data.matchdetail?.match?.date ?? ""
         let dateConverted = convertDateStringDynamic(dateString: date, inputDateFormat: "MM/dd/yyyy",outputDateFormat: "EEEE, MMM d, yyyy")
-        let venue = data.matchdetail.venue.name
+        let venue = data.matchdetail?.venue?.name ?? ""
         DispatchQueue.main.async {
             self.matchInfo = dateConverted + ", " + time + "\n" + venue
             self.ibTableView.reloadData()
@@ -110,21 +110,21 @@ class TeamsVC: UIViewController {
 extension TeamsVC : UITableViewDataSource{
     //MARK: Number of Rows in Section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataModel?.teams.values.first?.players.count ?? 0
+        return dataModel?.teams?.values.first?.players?.count ?? 0
     }
     
     //MARK: Cell for Row at IndexPath
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         //MARK: To sort players according to batting position
-        var sortedArray = dataModel?.teams.values.first?.players.sorted(by: { a, b in
-            (Int(a.value.position) ?? 0) < (Int(b.value.position) ?? 0)
+        var sortedArray = dataModel?.teams?.values.first?.players?.sorted(by: { a, b in
+            (Int(a.value.position ?? "0") ?? 0) < (Int(b.value.position ?? "0") ?? 0)
         })
         
         //MARK: Handle team selection
         if selectedTabIndex == 1{
-            sortedArray = dataModel?.teams.values.dropFirst().first?.players.sorted(by: { a, b in
-                (Int(a.value.position) ?? 0) < (Int(b.value.position) ?? 0)
+            sortedArray = dataModel?.teams?.values.dropFirst().first?.players?.sorted(by: { a, b in
+                (Int(a.value.position ?? "0") ?? 0) < (Int(b.value.position ?? "0") ?? 0)
             })
         }
         cell.textLabel?.text = setCelldata(sortedArray: sortedArray, index: indexPath.row)
@@ -145,12 +145,12 @@ extension TeamsVC : UITableViewDataSource{
 extension TeamsVC : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        var sortedArray = dataModel?.teams.values.first?.players.sorted(by: { a, b in
-            (Int(a.value.position) ?? 0) < (Int(b.value.position) ?? 0)
+        var sortedArray = dataModel?.teams?.values.first?.players?.sorted(by: { a, b in
+            (Int(a.value.position ?? "0") ?? 0) < (Int(b.value.position ?? "0") ?? 0)
         })
         if selectedTabIndex == 1{
-            sortedArray = dataModel?.teams.values.dropFirst().first?.players.sorted(by: { a, b in
-                (Int(a.value.position) ?? 0) < (Int(b.value.position) ?? 0)
+            sortedArray = dataModel?.teams?.values.dropFirst().first?.players?.sorted(by: { a, b in
+                (Int(a.value.position ?? "0") ?? 0) < (Int(b.value.position ?? "0") ?? 0)
             })
         }
         guard let playerModel = sortedArray?[indexPath.row].value else {
@@ -177,7 +177,7 @@ extension TeamsVC : UICollectionViewDataSource{
             cell.ibIndicator.backgroundColor = .clear
             cell.ibTitle.textColor = .lightGray
         }
-        let teamName = dataModel?.teams.map{
+        let teamName = dataModel?.teams?.map{
             $0.value.nameFull
         }
         cell.ibTitle.text = teamName?[indexPath.row]
@@ -213,15 +213,15 @@ extension TeamsVC{
     //MARK: Get Player Info
     func getPlayerInfo(playerModel : Player?)-> String{
         var info = playerModel?.nameFull ?? ""
-        info += (playerModel?.batting.style.rawValue.lowercased() ?? "") == "rhb" ? "\nRight Hand Batter" : "\nLeft Hand Batter"
+        info += (playerModel?.batting?.style?.rawValue.lowercased() ?? "") == "rhb" ? "\nRight Hand Batter" : "\nLeft Hand Batter"
         
-        if let bowlingStyle = BowlingStyle(rawValue: playerModel?.bowling.style.lowercased() ?? "") {
+        if let bowlingStyle = BowlingStyle(rawValue: playerModel?.bowling?.style?.lowercased() ?? "") {
             if bowlingStyle.rawValue == ""{
             } else {
                 info += "\n" + bowlingStyle.displayName
             }
         } else {
-            info += bowlingStyle(bowlingStyle: playerModel?.bowling.style ?? "NA")
+            info += bowlingStyle(bowlingStyle: playerModel?.bowling?.style ?? "NA")
         }
         
         //info += "\n" + "Runs : " + (playerModel?.batting.runs ?? "NA")

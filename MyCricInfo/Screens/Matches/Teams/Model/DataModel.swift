@@ -8,8 +8,8 @@ import Foundation
 
 // MARK: - DataModel
 struct DataModel: Codable {
-    let matchdetail: Matchdetail
-    let teams: [String: Team]
+    let matchdetail: Matchdetail?
+    let teams: [String: Team]?
 
     enum CodingKeys: String, CodingKey {
         case matchdetail = "Matchdetail"
@@ -19,14 +19,14 @@ struct DataModel: Codable {
 
 // MARK: - Matchdetail
 struct Matchdetail: Codable {
-    let teamHome, teamAway: String
-    let match: Match
-    let series: Series
-    let venue: Venue
-    let officials: Officials
-    let weather, tosswonby, status, statusID: String
-    let playerMatch, result, winningteam, winmargin: String
-    let equation: String
+    let teamHome, teamAway: String?
+    let match: Match?
+    let series: Series?
+    let venue: Venue?
+    let officials: Officials?
+    let weather, tosswonby, status, statusID: String?
+    let playerMatch, result, winningteam, winmargin: String?
+    let equation: String?
 
     enum CodingKeys: String, CodingKey {
         case teamHome = "Team_Home"
@@ -49,9 +49,9 @@ struct Matchdetail: Codable {
 
 // MARK: - Match
 struct Match: Codable {
-    let livecoverage, id, code, league: String
-    let number, type, date, time: String
-    let offset, daynight: String
+    let livecoverage, id, code, league: String?
+    let number, type, date, time: String?
+    let offset, daynight: String?
 
     enum CodingKeys: String, CodingKey {
         case livecoverage = "Livecoverage"
@@ -69,7 +69,7 @@ struct Match: Codable {
 
 // MARK: - Officials
 struct Officials: Codable {
-    let umpires, referee: String
+    let umpires, referee: String?
 
     enum CodingKeys: String, CodingKey {
         case umpires = "Umpires"
@@ -79,8 +79,8 @@ struct Officials: Codable {
 
 // MARK: - Series
 struct Series: Codable {
-    let id, name, status, tour: String
-    let tourName: String
+    let id, name, status, tour: String?
+    let tourName: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "Id"
@@ -93,7 +93,7 @@ struct Series: Codable {
 
 // MARK: - Venue
 struct Venue: Codable {
-    let id, name: String
+    let id, name: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "Id"
@@ -103,8 +103,8 @@ struct Venue: Codable {
 
 // MARK: - Team
 struct Team: Codable {
-    let nameFull, nameShort: String
-    let players: [String: Player]
+    let nameFull, nameShort: String?
+    let players: [String: Player]?
 
     enum CodingKeys: String, CodingKey {
         case nameFull = "Name_Full"
@@ -115,9 +115,9 @@ struct Team: Codable {
 
 // MARK: - Player
 struct Player: Codable {
-    let position, nameFull: String
-    let batting: Batting
-    let bowling: Bowling
+    let position, nameFull: String?
+    let batting: Batting?
+    let bowling: Bowling?
     let iscaptain, iskeeper: Bool?
 
     enum CodingKeys: String, CodingKey {
@@ -132,8 +132,8 @@ struct Player: Codable {
 
 // MARK: - Batting
 struct Batting: Codable {
-    let style: Style
-    let average, strikerate, runs: String
+    let style: Style?
+    let average, strikerate, runs: String?
 
     enum CodingKeys: String, CodingKey {
         case style = "Style"
@@ -150,7 +150,7 @@ enum Style: String, Codable {
 
 // MARK: - Bowling
 struct Bowling: Codable {
-    let style, average, economyrate, wickets: String
+    let style, average, economyrate, wickets: String?
 
     enum CodingKeys: String, CodingKey {
         case style = "Style"
@@ -159,6 +159,7 @@ struct Bowling: Codable {
         case wickets = "Wickets"
     }
 }
+
 // MARK: - Style
 enum BowlingStyle: String {
     case ob = "Off Break"

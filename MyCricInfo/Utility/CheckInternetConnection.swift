@@ -11,7 +11,7 @@ func isConnectedToNetwork() -> Bool {
     let isReachable = flags.contains(.reachable)
     let needsConnection = flags.contains(.connectionRequired)
     if !(isReachable && !needsConnection) {
-        print("Check Internet Connection")
+        debugPrint("Check Internet Connection")
     }
     
     return (isReachable && !needsConnection)
