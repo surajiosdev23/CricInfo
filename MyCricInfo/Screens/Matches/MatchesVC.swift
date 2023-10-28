@@ -45,7 +45,6 @@ extension MatchesVC : UITableViewDelegate{
         tableView.deselectRow(at: indexPath, animated: false)
         let vc = TeamsVC(nibName: "TeamsVC", bundle: nil)
         vc.matchUrl = ApiUrls.baseApi + (indexPath.row == 0 ? ApiUrls.nzIndUrl : ApiUrls.saPakUrl)
-        vc.navBarTitle = matchesArray[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

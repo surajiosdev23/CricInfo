@@ -14,7 +14,6 @@ class TeamsVC: UIViewController {
     let teamsVM = TeamsViewModel()
     var selectedTabIndex = 0 //MARK: for Tab switching reference
     var matchUrl = ""
-    var navBarTitle = ""
     var matchInfo = ""
     
     //MARK: View Lifecycle Methods
@@ -27,7 +26,7 @@ class TeamsVC: UIViewController {
     func setUpNavigationBar(){
         self.title = "Squads"
         self.navigationController?.navigationBar.setUpNavBar()
-        // Set right bar button item
+        //MARK: Set right bar button item
         let showInfo = UIBarButtonItem(title: "Info", style: .plain, target: self, action: #selector(showInfoTapped(sender:)))
         navigationItem.rightBarButtonItems = [showInfo]
     }
@@ -86,7 +85,7 @@ class TeamsVC: UIViewController {
         }
     }
     
-    // Additional Data Handling and Helper Methods...
+    //MARK: Additional Data Handling and Helper Methods...
     
     //MARK: Set Data
     func setData(data : DataModel){
@@ -112,19 +111,18 @@ extension TeamsVC : UITableViewDataSource{
     //MARK: Cell for Row at IndexPath
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        
+        //MARK: To sort players according to batting position
         var sortedArray = dataModel?.teams.values.first?.players.sorted(by: { a, b in
             (Int(a.value.position) ?? 0) < (Int(b.value.position) ?? 0)
         })
         
-        // Handle team selection
+        //MARK: Handle team selection
         if selectedTabIndex == 1{
             sortedArray = dataModel?.teams.values.dropFirst().first?.players.sorted(by: { a, b in
                 (Int(a.value.position) ?? 0) < (Int(b.value.position) ?? 0)
             })
         }
         cell.textLabel?.text = setCelldata(sortedArray: sortedArray, index: indexPath.row)
-        
         return cell
     }
     func setCelldata(sortedArray : [Dictionary<String, Player>.Element]?,index : Int) -> String{
@@ -132,7 +130,7 @@ extension TeamsVC : UITableViewDataSource{
         let isKeeper = sortedArray?[index].value.iskeeper ?? false
         let isCaptain = sortedArray?[index].value.iscaptain ?? false
         
-        // Set cell text
+        //MARK: Set cell text
         return (isKeeper && isCaptain) ? "\(fullName) (c & wk)" :
         (isCaptain) ? "\(fullName) (c)" :
         (isKeeper) ? "\(fullName) (wk)" :

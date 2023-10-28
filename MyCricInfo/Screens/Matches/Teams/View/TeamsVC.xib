@@ -42,18 +42,8 @@
                                 <outlet property="delegate" destination="-1" id="yly-GU-rBG"/>
                             </connections>
                         </collectionView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYV-IS-rid">
-                            <rect key="frame" x="12" y="60" width="296" height="2"/>
-                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="2" id="531-W2-hOh"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TyX-GV-xly">
-                            <rect key="frame" x="12" y="62" width="296" height="486"/>
+                            <rect key="frame" x="12" y="60" width="296" height="488"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="AWT-FK-zmx"/>
@@ -66,18 +56,15 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="PYV-IS-rid" firstAttribute="trailing" secondItem="TyX-GV-xly" secondAttribute="trailing" id="0yO-Nb-gjH"/>
-                        <constraint firstItem="PYV-IS-rid" firstAttribute="leading" secondItem="TyX-GV-xly" secondAttribute="leading" id="7wa-7s-eVF"/>
                         <constraint firstItem="nUT-uh-oWb" firstAttribute="centerY" secondItem="0W2-6i-qmi" secondAttribute="centerY" id="8bP-Zb-5Mj"/>
                         <constraint firstItem="nUT-uh-oWb" firstAttribute="centerX" secondItem="0W2-6i-qmi" secondAttribute="centerX" id="9UH-rQ-bTE"/>
                         <constraint firstAttribute="trailing" secondItem="TyX-GV-xly" secondAttribute="trailing" constant="12" id="F1G-cE-4uJ"/>
                         <constraint firstItem="PBh-Pr-NyW" firstAttribute="top" secondItem="0W2-6i-qmi" secondAttribute="top" constant="10" id="Idy-Eh-sCU"/>
-                        <constraint firstItem="TyX-GV-xly" firstAttribute="top" secondItem="PYV-IS-rid" secondAttribute="bottom" id="WN4-28-1nc"/>
                         <constraint firstItem="TyX-GV-xly" firstAttribute="leading" secondItem="0W2-6i-qmi" secondAttribute="leading" constant="12" id="eda-lI-cp2"/>
                         <constraint firstItem="PBh-Pr-NyW" firstAttribute="leading" secondItem="TyX-GV-xly" secondAttribute="leading" id="iZo-cR-dUQ"/>
+                        <constraint firstItem="TyX-GV-xly" firstAttribute="top" secondItem="PBh-Pr-NyW" secondAttribute="bottom" id="ipP-u9-3py"/>
                         <constraint firstItem="PBh-Pr-NyW" firstAttribute="trailing" secondItem="TyX-GV-xly" secondAttribute="trailing" id="q5h-vp-Dye"/>
                         <constraint firstAttribute="bottom" secondItem="TyX-GV-xly" secondAttribute="bottom" id="r2V-qN-TQB"/>
-                        <constraint firstItem="PYV-IS-rid" firstAttribute="top" secondItem="PBh-Pr-NyW" secondAttribute="bottom" id="vVH-mS-ah4"/>
                     </constraints>
                 </view>
             </subviews>
