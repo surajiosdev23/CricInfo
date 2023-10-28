@@ -62,26 +62,29 @@ class TeamsVC: UIViewController {
     
     //MARK: Data Fetching
     func fetchData(){
+        self.ibCollectionView.isHidden = true
+        self.ibTableView.isHidden = true
         if isConnectedToNetwork(){
             self.ibActivityIndicator.startAnimating()
-            teamsVM.fetchPlayerData(matchUrl: matchUrl, completion: { response in
-                self.ibActivityIndicator.stopAnimating()
+            teamsVM.fetchPlayerData(matchUrl: matchUrl, completion: { [weak self] response in
+                self?.ibActivityIndicator.stopAnimating()
                 switch response{
                 case .success(let data):
                     print("success")
                     guard let data = data else {
                         return
                     }
-                    self.dataModel = data
-                    self.setData(data: data)
+                    self?.dataModel = data
+                    self?.setData(data: data)
                 case .failure(let err):
                     print("failure")
                     print("ERROR \(err)")
-                    self.alert(title: "Alert", message: err.localizedDescription)
+                    self?.alert(title: "Alert", message: err.localizedDescription)
                 }
             })
         }else{
             self.alert(title: "Alert", message: "Connect to internet")
+            self.ibCollectionView.isHidden = true
         }
     }
     
@@ -89,6 +92,8 @@ class TeamsVC: UIViewController {
     
     //MARK: Set Data
     func setData(data : DataModel){
+        self.ibCollectionView.isHidden = false
+        self.ibTableView.isHidden = false
         let time = data.matchdetail.match.time
         let date = data.matchdetail.match.date
         let dateConverted = convertDateStringDynamic(dateString: date, inputDateFormat: "MM/dd/yyyy",outputDateFormat: "EEEE, MMM d, yyyy")

@@ -15,6 +15,7 @@ This mobile application is designed to dynamically fetch and display data from A
 
 ## Screen 2: Squads Display
 - Shows squads of both teams in an intuitive format.
+- Shows team based on batting position.
 - Offers filters to display All players, Team A or Team B players.
 - Highlights Captain and Wicket keeper, e.g., MS Dhoni (c & wk).
 - Allows tapping on each player to view their batting and bowling styles.
