@@ -6,11 +6,8 @@ This mobile application is designed to dynamically fetch and display data from A
 ## Screen 1: Match Details
 - Displays team names (e.g., INDIA vs NEW ZEALAND).
 - Includes a navigation button for redirecting to team, match info & player details.
-
-
-  ![IMG_4506](https://github.com/surajiosdev23/CricInfo/assets/125321702/0900443c-ee80-4a29-8799-277b498296d7)
-
-
+  
+![Simulator Screenshot - iPhone 14 Pro - 2023-10-30 at 17 00 59](https://github.com/surajiosdev23/CricInfo/assets/125321702/11fb692b-695f-44f0-9cea-850b31d49c78)
 
 
 ## Screen 2: Squads Display
@@ -22,9 +19,11 @@ This mobile application is designed to dynamically fetch and display data from A
 - Info button in navigation bar to show match info like date, time & venue.
 
 
-![IMG_4507](https://github.com/surajiosdev23/CricInfo/assets/125321702/1ba0e0ae-6310-410a-92af-227835a3b36d)
-![IMG_4508](https://github.com/surajiosdev23/CricInfo/assets/125321702/b97d8dde-f48f-4e50-8c2c-b1ccd085af21)
-![IMG_4509](https://github.com/surajiosdev23/CricInfo/assets/125321702/9aacd21f-6e00-4bf5-b9fd-93d867a136ed)
+![Simulator Screenshot - iPhone 14 Pro - 2023-10-30 at 17 01 04](https://github.com/surajiosdev23/CricInfo/assets/125321702/2062774d-be2b-4fbb-bb3a-48d8bf109bbb)
+![Simulator Screenshot - iPhone 14 Pro - 2023-10-30 at 17 01 08](https://github.com/surajiosdev23/CricInfo/assets/125321702/4353f0e4-2966-44d1-a620-2bf3166a98eb)
+![Simulator Screenshot - iPhone 14 Pro - 2023-10-30 at 17 01 20](https://github.com/surajiosdev23/CricInfo/assets/125321702/fa8c7167-5440-47d8-a701-e295fc87bf15)
+
+
 
 ### Points to Note
 1. The app is developed with flexibility in mind and simple UI/UX.
