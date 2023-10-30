@@ -26,16 +26,14 @@ This mobile application is designed to dynamically fetch and display data from A
 ![IMG_4508](https://github.com/surajiosdev23/CricInfo/assets/125321702/b97d8dde-f48f-4e50-8c2c-b1ccd085af21)
 ![IMG_4509](https://github.com/surajiosdev23/CricInfo/assets/125321702/9aacd21f-6e00-4bf5-b9fd-93d867a136ed)
 
-
-## Implementation Details
-
 ### Points to Note
 1. The app is developed with flexibility in mind and simple UI/UX.
-2. The solution works for both API URLs provided.
-3. Git version control is managed to commit.
-4. Api Parsing Logic & Data Model Classes are implemented.
-5. Code reusability is kept in mind while writing code.
-6. Error/Exception Handling is done.
+2. Supports light mode and dark mode.
+3. The solution works for both API URLs provided.
+4. Git version control is managed to commit.
+5. Api Parsing Logic & Data Model Classes are implemented.
+6. Code reusability is kept in mind while writing code.
+7. Error/Exception Handling is done.
 
 Feel free to reach out if you have any questions or need further information!
 
