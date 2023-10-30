@@ -17,8 +17,8 @@ extension UIViewController {
 }
 extension UINavigationBar {
     func setUpNavBar(){
-        let textAttributes = [NSAttributedString.Key.foregroundColor: THEMECOLOR]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: returnThemeColor()]
         self.titleTextAttributes = textAttributes
-        self.tintColor = THEMECOLOR
+        self.tintColor = returnThemeColor()
     }
 }

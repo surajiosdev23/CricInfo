@@ -171,8 +171,8 @@ extension TeamsVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeamTabCell", for: indexPath) as! TeamTabCell
         if selectedTabIndex == indexPath.row{
-            cell.ibIndicator.backgroundColor = THEMECOLOR
-            cell.ibTitle.textColor = THEMECOLOR
+            cell.ibIndicator.backgroundColor = returnThemeColor()
+            cell.ibTitle.textColor = returnThemeColor()
         }else{
             cell.ibIndicator.backgroundColor = .clear
             cell.ibTitle.textColor = .lightGray

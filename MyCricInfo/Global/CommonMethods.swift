@@ -25,3 +25,14 @@ func backButtonForNavBar() -> UIBarButtonItem {
     backItem.title = " "
     return backItem
 }
+func returnThemeColor()-> UIColor{
+    // Define a dynamic color provider for label title color
+    let themeColor: UIColor = UIColor { (traitCollection: UITraitCollection) -> UIColor in
+        if traitCollection.userInterfaceStyle == .dark {
+            return .systemOrange // Return dark mode color
+        } else {
+            return .black // Return light mode color
+        }
+    }
+    return themeColor
+}
