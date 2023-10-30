@@ -28,7 +28,18 @@
 		1D03CC0729B1284800228E05 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03CC0629B1284800228E05 /* TeamViewModel.swift */; };
 		1D2BD25C2ADA5E130022BF3C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BD25B2ADA5E130022BF3C /* extensions.swift */; };
 		1D2BD25E2ADA5E860022BF3C /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BD25D2ADA5E860022BF3C /* enums.swift */; };
+		1D68D7E12AEFC4E3005CD4D9 /* MyCricInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D68D7E02AEFC4E3005CD4D9 /* MyCricInfoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D68D7E22AEFC4E3005CD4D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A8E3E0527146E9700EE517A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A8E3E0C27146E9700EE517A;
+			remoteInfo = MyCricInfo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0A8E3E0D27146E9700EE517A /* MyCricInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCricInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +65,19 @@
 		1D03CC0629B1284800228E05 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		1D2BD25B2ADA5E130022BF3C /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		1D2BD25D2ADA5E860022BF3C /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
+		1D68D7DE2AEFC4E3005CD4D9 /* MyCricInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCricInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D68D7E02AEFC4E3005CD4D9 /* MyCricInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCricInfoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0A8E3E0A27146E9700EE517A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D68D7DB2AEFC4E3005CD4D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0A8E3E0F27146E9700EE517A /* MyCricInfo */,
+				1D68D7DF2AEFC4E3005CD4D9 /* MyCricInfoTests */,
 				0A8E3E0E27146E9700EE517A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0A8E3E0D27146E9700EE517A /* MyCricInfo.app */,
+				1D68D7DE2AEFC4E3005CD4D9 /* MyCricInfoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +206,14 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		1D68D7DF2AEFC4E3005CD4D9 /* MyCricInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D68D7E02AEFC4E3005CD4D9 /* MyCricInfoTests.swift */,
+			);
+			path = MyCricInfoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,17 +234,39 @@
 			productReference = 0A8E3E0D27146E9700EE517A /* MyCricInfo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1D68D7DD2AEFC4E3005CD4D9 /* MyCricInfoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D68D7E42AEFC4E3005CD4D9 /* Build configuration list for PBXNativeTarget "MyCricInfoTests" */;
+			buildPhases = (
+				1D68D7DA2AEFC4E3005CD4D9 /* Sources */,
+				1D68D7DB2AEFC4E3005CD4D9 /* Frameworks */,
+				1D68D7DC2AEFC4E3005CD4D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D68D7E32AEFC4E3005CD4D9 /* PBXTargetDependency */,
+			);
+			name = MyCricInfoTests;
+			productName = MyCricInfoTests;
+			productReference = 1D68D7DE2AEFC4E3005CD4D9 /* MyCricInfoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0A8E3E0527146E9700EE517A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					0A8E3E0C27146E9700EE517A = {
 						CreatedOnToolsVersion = 12.0.1;
+					};
+					1D68D7DD2AEFC4E3005CD4D9 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 0A8E3E0C27146E9700EE517A;
 					};
 				};
 			};
@@ -232,6 +284,7 @@
 			projectRoot = "";
 			targets = (
 				0A8E3E0C27146E9700EE517A /* MyCricInfo */,
+				1D68D7DD2AEFC4E3005CD4D9 /* MyCricInfoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +300,13 @@
 				0A8E3E1A27146E9A00EE517A /* Assets.xcassets in Resources */,
 				0A8E3E6527148FAC00EE517A /* TeamTabCell.xib in Resources */,
 				0A8E3E1827146E9700EE517A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D68D7DC2AEFC4E3005CD4D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +335,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D68D7DA2AEFC4E3005CD4D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D68D7E12AEFC4E3005CD4D9 /* MyCricInfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D68D7E32AEFC4E3005CD4D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A8E3E0C27146E9700EE517A /* MyCricInfo */;
+			targetProxy = 1D68D7E22AEFC4E3005CD4D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0A8E3E1627146E9700EE517A /* Main.storyboard */ = {
@@ -425,7 +501,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fintoo.fin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cricinfo.in;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -444,10 +520,50 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fintoo.fin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cricinfo.in;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1D68D7E52AEFC4E3005CD4D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G699VJZFWY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cricinfo.in.MyCricInfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCricInfo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyCricInfo";
+			};
+			name = Debug;
+		};
+		1D68D7E62AEFC4E3005CD4D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G699VJZFWY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cricinfo.in.MyCricInfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCricInfo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyCricInfo";
 			};
 			name = Release;
 		};
@@ -468,6 +584,15 @@
 			buildConfigurations = (
 				0A8E3E2227146E9A00EE517A /* Debug */,
 				0A8E3E2327146E9A00EE517A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D68D7E42AEFC4E3005CD4D9 /* Build configuration list for PBXNativeTarget "MyCricInfoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D68D7E52AEFC4E3005CD4D9 /* Debug */,
+				1D68D7E62AEFC4E3005CD4D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

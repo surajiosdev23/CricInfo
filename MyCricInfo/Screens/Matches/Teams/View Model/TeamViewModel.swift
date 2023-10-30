@@ -4,7 +4,10 @@
 
 import Foundation
 
-class TeamsViewModel {
+protocol fetchPlayers {
+    func fetchPlayerData(matchUrl : String,completion: @escaping (Swift.Result<DataModel?, Error>) -> Void)
+}
+class TeamsViewModel : fetchPlayers{
     let network = GenericNetworkCall()
     private var players = [Player]()
     
