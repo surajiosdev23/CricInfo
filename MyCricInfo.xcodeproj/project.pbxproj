@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,7 @@
 		1D2BD25C2ADA5E130022BF3C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BD25B2ADA5E130022BF3C /* extensions.swift */; };
 		1D2BD25E2ADA5E860022BF3C /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BD25D2ADA5E860022BF3C /* enums.swift */; };
 		1D68D7E12AEFC4E3005CD4D9 /* MyCricInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D68D7E02AEFC4E3005CD4D9 /* MyCricInfoTests.swift */; };
+		1D93F9B32B038EAB0064FCCD /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = 1D93F9B22B038EAB0064FCCD /* ViewAnimator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D93F9B32B038EAB0064FCCD /* ViewAnimator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +232,9 @@
 			dependencies = (
 			);
 			name = MyCricInfo;
+			packageProductDependencies = (
+				1D93F9B22B038EAB0064FCCD /* ViewAnimator */,
+			);
 			productName = MyCricInfo;
 			productReference = 0A8E3E0D27146E9700EE517A /* MyCricInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 0A8E3E0427146E9700EE517A;
+			packageReferences = (
+				1D93F9B12B038EAB0064FCCD /* XCRemoteSwiftPackageReference "ViewAnimator" */,
+			);
 			productRefGroup = 0A8E3E0E27146E9700EE517A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -598,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D93F9B12B038EAB0064FCCD /* XCRemoteSwiftPackageReference "ViewAnimator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcosgriselli/ViewAnimator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D93F9B22B038EAB0064FCCD /* ViewAnimator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D93F9B12B038EAB0064FCCD /* XCRemoteSwiftPackageReference "ViewAnimator" */;
+			productName = ViewAnimator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A8E3E0527146E9700EE517A /* Project object */;
 }

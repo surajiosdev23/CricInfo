@@ -1,5 +1,6 @@
 //MARK: Import Statements
 import UIKit
+import ViewAnimator
 
 //MARK: TeamsVC Class Definition
 class TeamsVC: UIViewController {
@@ -15,6 +16,9 @@ class TeamsVC: UIViewController {
     var selectedTabIndex = 0 //MARK: for Tab switching reference
     var matchUrl = ""
     var matchInfo = ""
+    let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
+    let zoomAnimation = AnimationType.zoom(scale: 0.2)
+    let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
     
     //MARK: View Lifecycle Methods
     override func viewDidLoad() {
@@ -102,6 +106,9 @@ class TeamsVC: UIViewController {
             self.matchInfo = dateConverted + ", " + time + "\n" + venue
             self.ibTableView.reloadData()
             self.ibCollectionView.reloadData()
+            UIView.animate(views: self.ibTableView.visibleCells,
+                           animations: [self.fromAnimation, self.zoomAnimation],
+                           duration: 0.5)
         }
     }
 }
@@ -192,6 +199,13 @@ extension TeamsVC : UICollectionViewDelegate{
         ibTableView.setContentOffset(CGPoint.zero, animated:false)//MARK: to move tableview cell to first index when Tab switched
         self.ibCollectionView.reloadData()
         self.ibTableView.reloadData()
+        
+        UIView.animate(views: self.ibCollectionView.visibleCells,
+                       animations: [self.zoomAnimation, rotateAnimation],
+                       duration: 0.5)
+        UIView.animate(views: self.ibTableView.visibleCells,
+                       animations: [self.fromAnimation, self.zoomAnimation],
+                       duration: 0.5)
     }
 }
 
